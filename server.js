@@ -15,4 +15,8 @@ app.get("/random", (req, res) => {
   res.send(String(Math.floor(Math.random() * 10)));
 });
 
+app.get("/time", (req, res) => {
+  res.send(new Date().toISOString());
+});
+
 app.listen(3000);
